@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap');
+
+//primary
+$light-red-cta-text: hsl(356, 100%, 66%);
+$very-light-red-cta-hover-background: hsl(355, 100%, 74%);
+$very-dark-blue-headings: hsl(208, 49%, 24%);
+
+//neutral
+$white: hsl(0, 0%, 100%);
+$grayish-blue-footer-text: hsl(240, 2%, 79%);
+$very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
+$very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
+
+//gradient
+//Background gradient - Intro/CTA mobile nav:
+$very-light-red: hsl(13, 100%, 72%);
+$light-red: hsl(353, 100%, 62%);
+
+//Background gradient - body:
+$very-dark-gray-blue: hsl(237, 17%, 21%);
+$very-dark-desatured-blue: hsl(237, 23%, 32%);
+
+//font
+$fs: 16px;
+$ff-overpass: 'Overpass', sans-serif;
+$fw-overpass-light: 300;
+$fw-overpass-semi-bold: 600;
+
+$ff-ubuntu: 'Ubuntu', sans-serif;
+$fw-ubuntu-regular: 400;
+$fw-ubuntu-medium: 500;
+$fw-ubuntu-bold: 700;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+.header {
+  font-family: $ff-ubuntu;
+  background-image:
+    url('../images/bg-pattern-intro-desktop.svg'),
+    radial-gradient(circle at 60%, $light-red, $very-light-red);
+  background-size: 200%;
+  background-position: 20% 50%;
+  border-radius: 0 0 0 120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+  width: 100%;
+  height: 85vh;
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    margin: 3.5em auto;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 2em;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    button {
+      background: none;
+      border: none;
+      color: $white;
+      cursor: pointer;
+    }
+
+    button::before {
+      display: block;
+      content: 'boldnochange';
+      font-weight: $fw-overpass-semi-bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    button:hover {
+      font-weight: $fw-overpass-semi-bold;
+    }
+
+    &:focus-within > * {
+      display: block;
+    }
+  }
+
+  &__options {
+    display: none;
+    position: absolute;
+    transform: translateY(10px);
+
+    ul {
+      background-color: $white;
+      padding: 1rem;
+      padding-right: 2.5rem;
+      list-style: none;
+      border-radius: 5px;
+      box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0.199);
+    }
+
+    ul::before {
+      display: block;
+      content: 'boldnochange';
+      font-weight: $fw-overpass-semi-bold;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    li {
+      padding: .5rem 0;
+      cursor: pointer;
+
+      &:hover {
+        font-weight: $fw-overpass-semi-bold;
+      }
+    }
+  }
+
+  &__user {
+    ul {
+      display: flex;
+      gap: 2em;
+      align-items: center;
+    }
+  }
+
+  &__login {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__signup {
+    text-decoration: none;
+    font-weight: $fw-overpass-semi-bold;
+    color: $light-red;
+    background-color: $white;
+    padding: .6em 1.5em;
+    border-radius: 25px;
+  }
+}
+
+.hero {
+  font-family: $ff-overpass;
+  color: $white;
+  text-align: center;
+
+  h1 {
+    font-size: clamp(5vmin, 8vmin, 10vmin);
+  }
+
+  p {
+    margin-top: 2em;
+    font-weight: $fw-overpass-light;
+  }
+
+  &__buttons {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  &__start {
+    font-family: $ff-ubuntu;
+    color: $light-red;
+    background-color: none;
+    font-weight: $fw-ubuntu-bold;
+    border: none;
+    padding: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  &__more {
+    font-family: $ff-ubuntu;
+    font-weight: $fw-ubuntu-bold;
+    border: 1px solid $white;
+    background-color: rgba(255, 0, 0, 0);
+    color: $white;
+    padding: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+}
+
+.main {
+  font-family: $ff-overpass;
+
+  &__first {
+    padding: 20vh 0;
+    color: $very-dark-blue-headings;
+    display: flex;
+
+    background-image: url('../images/illustration-editor-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right -14.5em bottom -2em;
+  }
+}
+
+.section {
+  &__title {
+    text-align: center;
+    font-size: 4.5vmin;
+  }
+
+  &__text {
+    width: 40%;
+    margin-top: 4em;
+    margin-left: 10%;
+  }
+
+  &__subtitle {
+    font-size: 4vmin;
+    margin-top: 5em 0;
+  }
+
+  &__paragraph {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    line-height: 1.8em;
+  }
+}
+
+.footer {
+  background-color: $very-dark-black-blue-footer-background;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

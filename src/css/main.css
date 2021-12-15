@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+.App {
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "Ubuntu", sans-serif;
+  background-image: url("../images/bg-pattern-intro-desktop.svg"), radial-gradient(circle at 60%, #ff3d54, #ff8f70);
+  background-size: 200%;
+  background-position: 20% 50%;
+  border-radius: 0 0 0 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20%;
+  width: 100%;
+  height: 85vh;
+}
+
+.header__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  margin: 3.5em auto;
+}
+
+.header__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-left: 2em;
+}
+
+.header__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__menu button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header__menu button::before {
+  display: block;
+  content: 'boldnochange';
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.header__menu button:hover {
+  font-weight: 600;
+}
+
+.header__menu:focus-within > * {
+  display: block;
+}
+
+.header__options {
+  display: none;
+  position: absolute;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.header__options ul {
+  background-color: white;
+  padding: 1rem;
+  padding-right: 2.5rem;
+  list-style: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0.199);
+          box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0.199);
+}
+
+.header__options ul::before {
+  display: block;
+  content: 'boldnochange';
+  font-weight: 600;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.header__options li {
+  padding: .5rem 0;
+  cursor: pointer;
+}
+
+.header__options li:hover {
+  font-weight: 600;
+}
+
+.header__user ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__login {
+  text-decoration: none;
+  color: white;
+}
+
+.header__signup {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ff3d54;
+  background-color: white;
+  padding: .6em 1.5em;
+  border-radius: 25px;
+}
+
+.hero {
+  font-family: "Overpass", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(5vmin, 8vmin, 10vmin);
+}
+
+.hero p {
+  margin-top: 2em;
+  font-weight: 300;
+}
+
+.hero__buttons {
+  margin-top: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+.hero__start {
+  font-family: "Ubuntu", sans-serif;
+  color: #ff3d54;
+  background-color: none;
+  font-weight: 700;
+  border: none;
+  padding: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.hero__more {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  border: 1px solid white;
+  background-color: rgba(255, 0, 0, 0);
+  color: white;
+  padding: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.main {
+  font-family: "Overpass", sans-serif;
+}
+
+.main__first {
+  padding: 20vh 0;
+  color: #1f3f5b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../images/illustration-editor-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right -14.5em bottom -2em;
+}
+
+.section__title {
+  text-align: center;
+  font-size: 4.5vmin;
+}
+
+.section__text {
+  width: 40%;
+  margin-top: 4em;
+  margin-left: 10%;
+}
+
+.section__subtitle {
+  font-size: 4vmin;
+  margin-top: 5em 0;
+}
+
+.section__paragraph {
+  margin-top: 1em;
+  margin-bottom: 3em;
+  line-height: 1.8em;
+}
+
+.footer {
+  background-color: #25252d;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */
