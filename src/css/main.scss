@@ -204,38 +204,82 @@ $fw-ubuntu-bold: 700;
   font-family: $ff-overpass;
 
   &__first {
-    padding: 20vh 0;
+    padding-top: 10em;
+    padding-bottom: 10em;
     color: $very-dark-blue-headings;
-    display: flex;
 
     background-image: url('../images/illustration-editor-desktop.svg');
-    background-size: contain;
+    background-size: 60%;
     background-repeat: no-repeat;
-    background-position: right -14.5em bottom -2em;
-  }
-}
+    background-position: right -14.5em bottom .5em;
 
-.section {
-  &__title {
-    text-align: center;
-    font-size: 4.5vmin;
+    .section {
+      &__title {
+        text-align: center;
+        font-size: 4.5vmin;
+      }
+    
+      &__text {
+        width: 40%;
+        margin-top: 4em;
+        margin-left: 10%;
+      }
+    
+      &__subtitle {
+        font-size: 4vmin;
+        margin-top: 5em 0;
+      }
+    
+      &__paragraph {
+        margin-top: 1em;
+        margin-bottom: 3em;
+        line-height: 1.8em;
+      }
+    }
   }
 
-  &__text {
-    width: 40%;
-    margin-top: 4em;
-    margin-left: 10%;
+  &__second {
+    padding: 7em 11em;
+    // border-bottom: 9em solid transparent;
+    // border-top: 10em solid transparent;
+    color: $white;
+    border-radius: 0 100px 0 100px;
+    // background-image:
+      // url('../images/illustration-phones.svg'),
+      // url('../images/bg-pattern-circles.svg');
+    // background-color: $very-dark-blue-headings;
+    background-image:
+      linear-gradient(to right, $very-dark-gray-blue, $very-dark-desatured-blue);
+    // background-repeat: no-repeat;
+    // background-size: auto, 80%;
+    // background-position: 10% 50%, -80% 80%;
+
+    .phones-div {
+      position: absolute;
+      transform: translate(-3em, -10.6em); 
+    }
+
+    .section {
+      width: 50%;
+      margin-left: 40vw;
+
+      &__subtitle {
+        font-size: 5.5vmin;
+        font-weight: $fw-overpass-light;
+        padding: .5em 0;
+      }
+
+      &__paragraph {
+        font-family: $ff-overpass;
+        font-weight: $fw-overpass-light;
+        line-height: 1.8em;
+        letter-spacing: .05em;
+      }
+    }
   }
 
-  &__subtitle {
-    font-size: 4vmin;
-    margin-top: 5em 0;
-  }
-
-  &__paragraph {
-    margin-top: 1em;
-    margin-bottom: 3em;
-    line-height: 1.8em;
+  &__third {
+    margin-top: 5em;
   }
 }
 

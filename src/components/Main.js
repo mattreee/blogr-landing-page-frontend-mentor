@@ -1,3 +1,5 @@
+import PhonesSVG from '../images/illustration-phones.svg';
+
 const Main = () => {
   return (
     <main className="main">
@@ -20,8 +22,11 @@ const Main = () => {
       </section>
 
       <section className="main__second">
+        <div className="phones-div">
+          <img src={PhonesSVG} alt="" />
+        </div>
         <div className="section">
-          <h2 className='section__title'>State of the Art Infrastructure</h2>
+          <h2 className='section__subtitle'>State of the Art Infrastructure</h2>
           <p className='section__paragraph'>
             With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
           </p>
@@ -30,12 +35,12 @@ const Main = () => {
 
       <section className="main__third">
         <div className="section">
-          <h2 className='section__title'>Free, open, simple</h2>
+          <h2 className='section__subtitle'>Free, open, simple</h2>
           <p className='section__paragraph'>
             Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
           </p>
 
-          <h2 className='section__title'>Powerful tooling</h2>
+          <h2 className='section__subtitle'>Powerful tooling</h2>
           <p className='section__paragraph'>
             Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but capable of producing even the most complicated sites.
           </p>
