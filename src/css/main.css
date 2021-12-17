@@ -284,7 +284,7 @@
   border-bottom: 18em solid transparent;
   background-image: url(../images/illustration-laptop-desktop.svg);
   background-repeat: no-repeat;
-  background-position: -75%;
+  background-position: -17em;
 }
 
 .main__third .section {
@@ -352,5 +352,31 @@
 
 .attribution a {
   color: #3e52a3;
+}
+
+@media only screen and (max-width: 900px) {
+  .header {
+    background-image: url("../images/bg-pattern-intro-mobile.svg"), radial-gradient(circle at 50%, #ff3d54, #ff8f70);
+    background-position: 50% 10%;
+    height: 95vh;
+  }
+  .header__logo {
+    height: 2em;
+  }
+  .header__navigation {
+    margin: 0;
+    margin-top: 2.5em;
+    margin-left: 2em;
+  }
+  .header__main {
+    display: none;
+  }
+  .hero {
+    margin: 0 15vw;
+  }
+  .hero h1 {
+    font-size: 7.5vmin;
+    text-align: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
