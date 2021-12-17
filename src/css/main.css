@@ -11,9 +11,6 @@
 
 .header {
   font-family: "Ubuntu", sans-serif;
-  background-image: url("../images/bg-pattern-intro-desktop.svg"), radial-gradient(circle at 60%, #ff3d54, #ff8f70);
-  background-size: 200%;
-  background-position: 20% 50%;
   border-radius: 0 0 0 120px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,6 +22,9 @@
   gap: 20%;
   width: 100%;
   height: 85vh;
+  background-image: url("../images/bg-pattern-intro-desktop.svg"), radial-gradient(circle at 60%, #ff3d54, #ff8f70);
+  background-size: 200%;
+  background-position: 20% 50%;
 }
 
 .header__navigation {
@@ -76,6 +76,7 @@
 
 .header__menu button:hover {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .header__menu:focus-within > * {
@@ -141,6 +142,11 @@
   border-radius: 25px;
 }
 
+.header__signup:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
 .hero {
   font-family: "Overpass", sans-serif;
   color: white;
@@ -178,6 +184,11 @@
   cursor: pointer;
 }
 
+.hero__start:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
 .hero__more {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
@@ -187,6 +198,11 @@
   padding: 1em;
   border-radius: 25px;
   cursor: pointer;
+}
+
+.hero__more:hover {
+  background-color: white;
+  color: #ff525d;
 }
 
 .main {
@@ -226,11 +242,15 @@
 }
 
 .main__second {
-  padding: 7em 11em;
+  margin-top: 3em;
+  padding: 6.8em 11em;
   color: white;
   border-radius: 0 100px 0 100px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
-  background-image: linear-gradient(to right, #2c2d3f, #3f4164);
+  background-image: url("../images/bg-pattern-circles.svg"), -webkit-gradient(linear, left top, right top, from(#2c2d3f), to(#3f4164));
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(to right, #2c2d3f, #3f4164);
+  background-repeat: no-repeat;
+  background-size: 80%, auto;
+  background-position: -108% 80%;
 }
 
 .main__second .phones-div {
@@ -258,14 +278,78 @@
 }
 
 .main__third {
-  margin-top: 5em;
+  padding: 0 10em;
+  margin: 2em 0;
+  border-top: 18em solid transparent;
+  border-bottom: 18em solid transparent;
+  background-image: url(../images/illustration-laptop-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -75%;
+}
+
+.main__third .section {
+  color: #4b5862;
+  width: 50%;
+  margin-left: 40vw;
+}
+
+.main__third .section__subtitle {
+  font-size: 4vmin;
+  margin-top: 5em 0;
+}
+
+.main__third .section__paragraph {
+  margin-top: 1.2em;
+  margin-bottom: 3em;
+  line-height: 1.8em;
 }
 
 .footer {
   background-color: #25252d;
+  color: #c8c8cb;
+  font-family: "Ubuntu", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10em;
+  padding: 4em 0;
+  padding-left: 10vw;
+  border-radius: 0 100px 0 0;
+}
+
+.footer h2 {
+  font-size: 1.2em;
+}
+
+.footer ul {
+  list-style: none;
+  margin-top: 2em;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+.footer li {
+  font-weight: 500;
+}
+
+.footer li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .attribution {
+  color: white;
+  background-color: #25252d;
   font-size: 11px;
   text-align: center;
 }
