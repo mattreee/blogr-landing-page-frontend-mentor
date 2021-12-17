@@ -338,10 +338,6 @@
   gap: 1em;
 }
 
-.footer li {
-  font-weight: 500;
-}
-
 .footer li:hover {
   text-decoration: underline;
   cursor: pointer;
