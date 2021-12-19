@@ -1,15 +1,26 @@
 import Logo from '../images/logo.svg';
 import ArrowLight from '../images/icon-arrow-light.svg';
+import ArrowDark from '../images/icon-arrow-dark.svg';
+import Hamburger from './Hamburger';
+import { useState } from 'react';
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+  const toggleMode = () => {
+    setMenu(!menu);
+  }
+
   return (
     <header className="header">
       <nav className="header__navigation">
         <img className='header__logo' src={Logo} alt="" />
-        <div className="header__main">
+        {window.innerWidth <= 900 &&
+          <Hamburger toggleMode={toggleMode} />
+        }
+        <div className={menu ? 'header__main m-active' : 'header__main'}>
           <div className="header__links">
             <div className="header__menu"> {/* Product */}
-              <button>Product <img src={ArrowLight} alt="" /></button>
+              <button>Product <img src={window.innerWidth > 900 ? ArrowLight : ArrowDark} alt="" /></button>
               <div className="header__options">
                 <ul>
                   <li>Overview</li>
@@ -21,7 +32,7 @@ const Header = () => {
               </div>
             </div>
             <div className="header__menu"> {/* Company */}
-              <button>Company <img src={ArrowLight} alt="" /></button>
+              <button>Company <img src={window.innerWidth > 900 ? ArrowLight : ArrowDark} alt="" /></button>
               <div className="header__options">
                 <ul>
                   <li>About</li>
@@ -32,7 +43,7 @@ const Header = () => {
               </div>
             </div>
             <div className="header__menu">{/* Connect */}
-              <button>Connect <img src={ArrowLight} alt="" /></button>
+              <button>Connect <img src={window.innerWidth > 900 ? ArrowLight : ArrowDark} alt="" /></button>
               <div className="header__options">
                 <ul>
                   <li>Contact</li>

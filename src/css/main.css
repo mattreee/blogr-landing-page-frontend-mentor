@@ -79,6 +79,11 @@
   text-decoration: underline;
 }
 
+.header__menu:focus-within img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .header__menu:focus-within > * {
   display: block;
 }
@@ -93,7 +98,7 @@
 .header__options ul {
   background-color: white;
   padding: 1rem;
-  padding-right: 2.5rem;
+  padding-right: 2.5em;
   list-style: none;
   border-radius: 5px;
   -webkit-box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0.199);
@@ -216,7 +221,7 @@
   background-image: url("../images/illustration-editor-desktop.svg");
   background-size: 60%;
   background-repeat: no-repeat;
-  background-position: 48em 3em;
+  background-position: 48em center;
 }
 
 .main__first .section__title {
@@ -376,11 +381,101 @@
   }
   .header__navigation {
     margin: 0;
-    margin-top: 2.5em;
+    margin-top: 3em;
     margin-left: 2em;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header__main {
     display: none;
+  }
+  .header__ham {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    background-image: url("../images/icon-hamburger.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .header__main.m-active {
+    display: block;
+    width: 85vw;
+    position: absolute;
+    top: 3em;
+    left: -2.7em;
+  }
+  .header__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 2em 0;
+    gap: 1.4em;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+  }
+  .header__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1em;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
+    padding: 2em 0;
+    border-top: 1px solid rgba(191, 64, 64, 0.2);
+    border-right: 5em solid white;
+    border-left: 5em solid white;
+  }
+  .header__login {
+    color: #2c2d3f;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+  }
+  .header__signup {
+    padding: .8em 1.7em;
+    color: white;
+    background-image: -webkit-gradient(linear, right top, left top, from(#ff3d54), to(#ff8f70));
+    background-image: linear-gradient(to left, #ff3d54, #ff8f70);
+  }
+  .header__menu button {
+    color: #1f3f5b;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1em;
+    margin: 0 auto;
+    font-weight: 600;
+  }
+  .header__menu button:hover {
+    text-decoration: none;
+  }
+  .header__options {
+    font-family: "Overpass", sans-serif;
+    font-weight: 600;
+    color: #4b5862;
+    display: none;
+    position: initial;
+  }
+  .header__options ul {
+    background-color: rgba(75, 88, 98, 0.08);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    text-align: center;
+  }
+  .header__options li {
+    padding: .5em 3em;
+    margin-left: 1em;
   }
   .hero {
     margin: 0 10vw;

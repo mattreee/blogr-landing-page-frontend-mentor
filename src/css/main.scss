@@ -83,6 +83,7 @@ $fw-ubuntu-bold: 700;
     }
 
     button::before {
+      //the letter width changes when bold. this just prevents the whole block shifting 2px to the side, everytime the user hover the buttons
       display: block;
       content: 'boldnochange';
       font-weight: $fw-overpass-semi-bold;
@@ -94,6 +95,10 @@ $fw-ubuntu-bold: 700;
     button:hover {
       font-weight: $fw-overpass-semi-bold;
       text-decoration: underline;
+    }
+
+    &:focus-within img {
+      transform: rotate(180deg);
     }
 
     &:focus-within > * {
@@ -109,7 +114,7 @@ $fw-ubuntu-bold: 700;
     ul {
       background-color: $white;
       padding: 1rem;
-      padding-right: 2.5rem;
+      padding-right: 2.5em;
       list-style: none;
       border-radius: 5px;
       box-shadow: 2px 2px 25px 0 rgba(0, 0, 0, 0.199);
@@ -227,7 +232,7 @@ $fw-ubuntu-bold: 700;
     background-image: url('../images/illustration-editor-desktop.svg');
     background-size: 60%;
     background-repeat: no-repeat;
-    background-position: 48em 3em;
+    background-position: 48em center;
 
     .section {
       &__title {
@@ -386,12 +391,100 @@ $fw-ubuntu-bold: 700;
 
     &__navigation {
       margin: 0;
-      margin-top: 2.5em;
+      margin-top: 3em;
       margin-left: 2em;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
     }
 
     &__main {
-      display: none; //////////fix this
+      display: none;
+    }
+
+    &__ham {
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      background-image: url('../images/icon-hamburger.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &__main.m-active {
+      display: block;
+      width: 85vw;
+      position: absolute;
+      top: 3em;
+      left: -2.7em;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      padding: 2em 0;
+      gap: 1.4em;
+      background-color: $white;
+      border-radius: 4px 4px 0 0;
+    }
+
+    //login and signup blocks
+    &__ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      background-color: $white;
+      border-radius: 0 0 4px 4px;
+      padding: 2em 0;
+      border-top: 1px solid hsla(360, 50%, 50%, .2);
+      border-right: 5em solid white;
+      border-left: 5em solid white;
+    }
+
+    &__login {
+      color: $very-dark-gray-blue;
+      font-family: $ff-ubuntu;
+      font-weight: $fw-ubuntu-medium;
+    }
+
+    &__signup {
+      padding: .8em 1.7em;
+      color: $white;
+      background-image: linear-gradient(to left, $light-red, $very-light-red);
+    }
+
+    &__menu {
+      button {
+        color: $very-dark-blue-headings;
+        font-family: $ff-ubuntu;
+        font-size: 1em;
+        margin: 0 auto;
+        font-weight: $fw-overpass-semi-bold;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &__options {
+      font-family: $ff-overpass;
+      font-weight: $fw-overpass-semi-bold;
+      color: $very-dark-grayish-blue-body-copy;
+      display: none;
+      position: initial;
+
+      ul {
+        background-color: hsla(207, 13%, 34%, .08);
+        box-shadow: none;
+        text-align: center;
+      }
+
+      li {
+        padding: .5em 3em;
+        margin-left: 1em;
+      }
     }
   }
 
