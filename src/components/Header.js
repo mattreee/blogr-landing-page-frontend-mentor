@@ -8,7 +8,7 @@ const Header = () => {
         <img className='header__logo' src={Logo} alt="" />
         <div className="header__main">
           <div className="header__links">
-            <div className="header__menu">
+            <div className="header__menu"> {/* Product */}
               <button>Product <img src={ArrowLight} alt="" /></button>
               <div className="header__options">
                 <ul>
@@ -20,7 +20,7 @@ const Header = () => {
                 </ul>             
               </div>
             </div>
-            <div className="header__menu">
+            <div className="header__menu"> {/* Company */}
               <button>Company <img src={ArrowLight} alt="" /></button>
               <div className="header__options">
                 <ul>
@@ -31,7 +31,7 @@ const Header = () => {
                 </ul>             
               </div>
             </div>
-            <div className="header__menu">
+            <div className="header__menu">{/* Connect */}
               <button>Connect <img src={ArrowLight} alt="" /></button>
               <div className="header__options">
                 <ul>
