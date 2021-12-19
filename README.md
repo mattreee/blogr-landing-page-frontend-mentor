@@ -36,7 +36,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - Flexbox
 - [React](https://reactjs.org/) - JS library
-- [Sass](https://sass-lang.com/) - React framework
+- [Sass](https://sass-lang.com/)
 
 ## Author
 
